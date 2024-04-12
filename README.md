@@ -4,6 +4,7 @@ Personal script to auto rice any Debian based distro.
 
 > [!Important]
 > It is thought to be used with `GNOME`, so please, install it before :D
+> You'll need to have sudo permissions in your user (add it to the `/etc/sudoers` file)
 
 ## Instructions to execute
 

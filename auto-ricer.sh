@@ -99,18 +99,18 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$PROFILE/ use-system-font false
 exec bash
 
-## Modify terminal theme
-### Get all profile IDs
-PROFILE_IDS=$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]',")
+# ## Modify terminal theme
+# ### Get all profile IDs
+# PROFILE_IDS=$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]',")
 
-### Find 'Green on Black' profile
-for ID in $PROFILE_IDS; do
-    NAME=$(gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$ID/ visible-name)
-    if [[ "$NAME" == "'Green on Black'" ]]; then
-        gsettings set org.gnome.Terminal.ProfilesList default "$ID"
-        break
-    fi
-done
+# ### Find 'Green on Black' profile
+# for ID in $PROFILE_IDS; do
+#     NAME=$(gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$ID/ visible-name)
+#     if [[ "$NAME" == "'Green on Black'" ]]; then
+#         gsettings set org.gnome.Terminal.ProfilesList default "$ID"
+#         break
+#     fi
+# done
 
 # We delete all .deb that could left
 rm *.deb
