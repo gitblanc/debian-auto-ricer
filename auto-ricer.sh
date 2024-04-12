@@ -82,6 +82,9 @@ mkdir -p ~/.config/ulauncher/user-themes
 cd ~/.config/ulauncher/user-themes
 git clone https://github.com/kalenpw/transparent-adwaita.git
 
+## Install Vim
+sudo apt install vim -y
+
 ## Install 
 
 # We delete all .deb that could left
