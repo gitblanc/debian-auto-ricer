@@ -13,8 +13,8 @@ setxkbmap es
 #-------WALLPAPER--------#
 #------------------------#
 
-gsettings set org.gnome.desktop.background picture-uri "asuka.png"
-gsettings set org.gnome.desktop.background picture-uri-dark "asuka.png"
+gsettings set org.gnome.desktop.background picture-uri "./wallpaper.jpg"
+gsettings set org.gnome.desktop.background picture-uri-dark "./wallpaper.jpg"
 
 #------------------------#
 #----------APPS----------#
@@ -164,8 +164,4 @@ cd /tmp/Tela-icon-theme-2023-06-25
 ./install.sh
 cd ..
 
-echo -e "\033[31mPlease, remember to reboot now and then do the following:\033[0m"
-echo -e "\033[31m1. Launc ulauncher and change the theme to Transparent Adwaita & launch at Login\033[0m"
-echo -e "\033[31m2. Launch gnome-tweaks and change manually the theme to Orchis-Dark-Compact and to Tela-Dark icon theme\033[0m"
-echo -e ""
-echo -e "\033[31mInstallation and configuration completed :D\033[0m"
+reboot

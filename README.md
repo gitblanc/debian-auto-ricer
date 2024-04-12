@@ -66,5 +66,13 @@ chmod +x debian-auto-ricer/auto-ricer.sh
 
 ## After finishing installation instructions
 
-1. Launch `Ulauncher` >> manually change the theme to `Transparent Adwaita` && enable `Launch at Login`
-2. Launch `gnome-tweaks` && manually change the **system** theme to `Orchis-Dark-Compact` && the **icons** theme to `Tela-Dark`
+1. Launch `Ulauncher`
+   1. Change Hotkey to `Ctrl+D`
+   2. Manually change the theme to `Transparent Adwaita`
+   3. Enable `Launch at Login`
+   4. Disable `Show Indicator Icon`
+2. Launch `gnome-tweaks`
+   1. Manually change the **system** theme to`Orchis-Dark-Compact`
+   2. Manually change the **icons** theme to `Tela-Dark`
+3. Launch `Vitals`
+   1. Set up `Seconds between updates to 1`
