@@ -1,8 +1,20 @@
 # debian-auto-ricer
 
 Personal script to auto rice any Debian based distro.
+
 > [!Important]
 > It is thought to be used with `GNOME`, so please, install it before :D
+
+## Instructions to execute
+
+> ![Tip]
+> Just run:
+
+```shell
+git clone https://github.com/gitblanc/debian-auto-ricer.git
+chmod +x debian-auto-ricer/auto-ricer.sh
+./auto-ricer.sh
+```
 
 ## Language && Keyboard Layout
 
