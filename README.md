@@ -7,7 +7,7 @@ Personal script to auto rice any Debian based distro.
 
 ## Instructions to execute
 
-> ![Tip]
+> [!Tip]
 > Just run:
 
 ```shell
