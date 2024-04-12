@@ -1,20 +1,19 @@
 #!/bin/bash
 
+### Get the default profile ID
+PROFILE=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
+DIRECTORY_LOCATION="$(pwd)"
 cd /tmp
-
-#------------------------#
-#-----KEYBOARD CONF------#
-#------------------------#
-
-# Set up spanish
-setxkbmap es
 
 #------------------------#
 #-------WALLPAPER--------#
 #------------------------#
 
-gsettings set org.gnome.desktop.background picture-uri "./wallpaper.jpg"
-gsettings set org.gnome.desktop.background picture-uri-dark "./wallpaper.jpg"
+WALLPAPER="${DIRECTORY_LOCATION}/img/wallpaper.jpg"
+echo $WALLPAPER
+gsettings set org.gnome.desktop.background picture-uri "$WALLPAPER"
+gsettings set org.gnome.desktop.background picture-uri-dark "$WALLPAPER"
+
 
 #------------------------#
 #----------APPS----------#
@@ -85,7 +84,33 @@ git clone https://github.com/kalenpw/transparent-adwaita.git
 ## Install Vim
 sudo apt install vim -y
 
-## Install 
+## Install Oh-my-posh
+sudo curl -s https://ohmyposh.dev/install.sh | sudo bash -s
+### Install a font
+oh-my-posh font install Hack ### I like the Hack one
+### Install a theme
+mkdir ~/oh-my-posh
+curl https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/lambda.omp.json -o ~/oh-my-posh/lamda.omp.json ### I like lambda
+### Configure it to be run on start
+echo "" >> ~/.bashrc
+echo 'eval "$(oh-my-posh init bash --config ~/oh-my-posh/lamda.omp.json)"' >> ~/.bashrc
+### Change the font
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$PROFILE/ font 'Hack 12'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$PROFILE/ use-system-font false
+exec bash
+
+## Modify terminal theme
+### Get all profile IDs
+PROFILE_IDS=$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]',")
+
+### Find 'Green on Black' profile
+for ID in $PROFILE_IDS; do
+    NAME=$(gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$ID/ visible-name)
+    if [[ "$NAME" == "'Green on Black'" ]]; then
+        gsettings set org.gnome.Terminal.ProfilesList default "$ID"
+        break
+    fi
+done
 
 # We delete all .deb that could left
 rm *.deb

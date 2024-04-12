@@ -22,20 +22,21 @@ chmod +x debian-auto-ricer/auto-ricer.sh
 
 ## Apps
 
-| Name      | Logo | Description                              |
-| --------- | ---- | ---------------------------------------- |
-| jq        | --   | cli app to edit `.json` files            |
-| Brave     | --   | Private browser                          |
-| Keepassxc | --   | Local password manager                   |
-| Shutter   | --   | Screenchot taker                         |
-| Neofetch  | --   | Cli app to display system info           |
-| Obsidian  | --   | Markdown editor for note taking          |
-| VSCode    | --   | Programming IDE                          |
-| NordVPN   | --   | VPN provider                             |
-| Spotify   | --   | Music provider                           |
-| Ulauncher | --   | Fast app launcher                        |
-| Vim       | --   | Cli file editor                          |
-| locate    | --   | Cli app to locate anything on the system |
+| Name       | Logo | Description                              |
+| ---------- | ---- | ---------------------------------------- |
+| jq         | --   | cli app to edit `.json` files            |
+| Brave      | --   | Private browser                          |
+| Keepassxc  | --   | Local password manager                   |
+| Shutter    | --   | Screenchot taker                         |
+| Neofetch   | --   | Cli app to display system info           |
+| Obsidian   | --   | Markdown editor for note taking          |
+| VSCode     | --   | Programming IDE                          |
+| NordVPN    | --   | VPN provider                             |
+| Spotify    | --   | Music provider                           |
+| Ulauncher  | --   | Fast app launcher                        |
+| Vim        | --   | Cli file editor                          |
+| locate     | --   | Cli app to locate anything on the system |
+| Oh-my-posh | ---- | App to customize terminal                |
 
 ## Dock
 
