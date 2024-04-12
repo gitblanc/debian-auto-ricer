@@ -1,8 +1,8 @@
 # debian-auto-ricer
 
 Personal script to auto rice any Debian based distro.
-
-> It is thought to be used with GNOME, so please, install it before :D
+> [!Important]
+> It is thought to be used with `GNOME`, so please, install it before :D
 
 ## Language && Keyboard Layout
 
